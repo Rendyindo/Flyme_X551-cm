@@ -443,6 +443,8 @@
     move-result v5
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/imsphone/ImsPhone;->notifyForVideoCapabilityChanged(Z)V
+    
+    invoke-direct/range {p0 .. p0}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$4;->broadcastFlymeImsStatusChange()V
 
     .end local v2    # "i":I
     .end local v3    # "tmpIsVideoCallEnabled":Z
