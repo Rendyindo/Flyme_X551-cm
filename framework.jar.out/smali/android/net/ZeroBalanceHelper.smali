@@ -65,30 +65,26 @@
     .locals 4
 
     .prologue
-    .line 73
     iget-object v1, p0, Landroid/net/ZeroBalanceHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 74
-    const v2, 0x10400d6
+    const v2, #android:string@operator_config_url#t
 
-    .line 73
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 75
     .local v0, "redirectURL":Ljava/lang/String;
-    const-string/jumbo v1, "ZeroBalance"
+    const-string v1, "ZeroBalance"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Returning the configured redirect URL   :   "
+    const-string v3, "Returning the configured redirect URL   :   "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -152,7 +148,7 @@
 
     move-result-object v0
 
-    const v1, 0x11200c3
+    const v1, #android:bool@config_zero_balance_operator#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
